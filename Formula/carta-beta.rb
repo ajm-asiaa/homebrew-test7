@@ -6,6 +6,12 @@ class CartaBeta < Formula
   sha256 "68bf3e0ad9cffc6e7b6df7a6fdac5f9e2d6dc0e83f67ccfb64b2e268f2dd3862"
   license "GPL-3.0-only"
 
+  bottle do
+    root_url "https://github.com/ajm-asiaa/homebrew-test7/releases/download/carta-beta-21.4.20"
+    sha256 cellar: :any,                 catalina:     "e8ae2e3d23baf87823355193164dab02c7047685493c68988980b1a9a5e620ce"
+    sha256 cellar: :any_skip_relocation, x86_64_linux: "ec6694a647c46e3a4b0373bb91591370b1f159c49f0efdaf967b33de64dd0645"
+  end
+
   depends_on "cmake" => :build
   depends_on "ajm-asiaa/test7/carta-casacore"
   depends_on "cartavis/tap/zfp"
