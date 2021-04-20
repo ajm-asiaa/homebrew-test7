@@ -3,7 +3,7 @@ class CartaBeta < Formula
   homepage "https://cartavis.github.io/"
   url "http://alma.asiaa.sinica.edu.tw/_downloads/opt-carta-backend.tar.gz"
   sha256 "68bf3e0ad9cffc6e7b6df7a6fdac5f9e2d6dc0e83f67ccfb64b2e268f2dd3862"
-
+  version "21.4.20"
   license "GPL-3.0-only"
 
   depends_on "cmake" => :build
