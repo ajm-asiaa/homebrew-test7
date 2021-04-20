@@ -1,17 +1,13 @@
 class CartaBeta < Formula
   desc "Carta-backend and carta-frontend components of CARTA"
   homepage "https://cartavis.github.io/"
-  url "https://github.com/CARTAvis/carta-backend.git", tag: "ajm/dockerfile-updates"
+  url "http://alma.asiaa.sinica.edu.tw/_downloads/opt-carta-backend.tar.gz"
+  shar256 "68bf3e0ad9cffc6e7b6df7a6fdac5f9e2d6dc0e83f67ccfb64b2e268f2dd3862"
+
   license "GPL-3.0-only"
 
-  bottle do
-    root_url "https://github.com/CARTAvis/homebrew-tap/releases/download/carta-beta-21.03.05"
-    sha256 cellar: :any,                 catalina:     "3381eeaa8af4dc90e48f502f2d7ab4797cc21436fa300fc1f7cdc43df552c8f4"
-    sha256 cellar: :any_skip_relocation, x86_64_linux: "d290094d24683405f1ad5f8c62d5fbba4f48909ddb8f262a0f2c554a49d30e52"
-  end
-
   depends_on "cmake" => :build
-  depends_on "cartavis/tap/carta-casacore"
+  depends_on "ajm-asiaa/test7/carta-casacore"
   depends_on "cartavis/tap/zfp"
   depends_on "curl"
   depends_on "fmt"
@@ -49,7 +45,6 @@ class CartaBeta < Formula
   end
 
   test do
-    assert_match "2.0.0-dev.21.03.04", shell_output("#{bin}/carta_backend --version")
     assert_true Dir.exist?(share/"carta/frontend")
   end
 end
