@@ -14,6 +14,7 @@ class CartaBeta < Formula
   depends_on "grpc"
   depends_on "libomp"
   depends_on "libuv"
+  depends_on "pkg-config"
   depends_on "protobuf"
   depends_on "pugixml"
   depends_on "tbb"
